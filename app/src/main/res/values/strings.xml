@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quidditch</string>
+    <string name="default_score">0</string>
+    <string name="result">The game is not over</string>
+    <string name="reset">reset</string>
+    <string name="quaffle">Quaffle</string>
+</resources>

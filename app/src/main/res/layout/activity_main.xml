@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/quidditch">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="com.example.android.quidditch.MainActivity">
+
+        <LinearLayout
+            android:id="@+id/pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/pics"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:src="@drawable/gryff1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/pics"
+                android:layout_weight="1"
+                android:padding="15dp"
+                android:src="@drawable/ravenclaw_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/g_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/default_score"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/scores"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/r_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/default_score"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/scores"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quaffles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/g_quaffle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_default"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:onClick="addTenToGryffindor"
+                android:text="@string/quaffle"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/result" />
+
+            <Button
+                android:id="@+id/c_quaffle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_default"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:onClick="addTenToRaveclaw"
+                android:text="Quaffle"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/result" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/snitches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/g_snitch"
+                android:layout_width="@dimen/pics"
+                android:layout_height="@dimen/pics_height"
+                android:layout_marginLeft="@dimen/padding_default"
+                android:layout_marginRight="@dimen/padding_default"
+                android:layout_weight="1"
+                android:background="@drawable/snitch6"
+                android:onClick="addSnitchToGryffindor"
+                android:padding="@dimen/padding_default" />
+
+            <Button
+                android:id="@+id/c_snitch"
+                android:layout_width="@dimen/pics"
+                android:layout_height="@dimen/pics_height"
+                android:layout_marginLeft="@dimen/padding_default"
+                android:layout_marginRight="@dimen/padding_default"
+                android:layout_weight="1"
+                android:background="@drawable/snitch6"
+                android:onClick="addSnitchToRavenclaw"
+                android:padding="@dimen/padding_default" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:onClick="reset"
+            android:text="@string/reset" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_default"
+            android:text="@string/result"
+            android:textSize="@dimen/result" />
+    </LinearLayout>
+</ScrollView>
